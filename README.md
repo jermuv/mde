@@ -74,6 +74,18 @@ DeviceEvents
 
 
 
-## Basic hunting
+
+## Browser stuff
+
+```
+DeviceFileEvents
+| where InitiatingProcessFileName in~ ("browser_broker.exe", "chrome.exe", "iexplore.exe", "firefox.exe", "outlook.exe", "msedge.exe")
+| where FileName endswith ".zip"
+// The FileOrigin* columns are available only on Edge and Chrome and from Windows 10 version 1703
+// https://techcommunity.microsoft.com/t5/Threat-Intelligence/Hunting-tip-of-the-month-Browser-downloads/td-p/220454
+| project Timestamp, DeviceName, FileName, FolderPath, FileOriginUrl, FileOriginReferrerUrl, FileOriginIP
+```
+
+
 
 ## other
