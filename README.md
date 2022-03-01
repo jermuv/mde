@@ -1,1 +1,5 @@
 # mde
+
+# Links
+
+# KQL tips
