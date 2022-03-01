@@ -43,6 +43,37 @@ DeviceNetworkEvents
 
 ```
 
+Device Events:
+
+```
+DeviceEvents
+| where DeviceName != "win-trfl5rqp5g8"
+| order by Timestamp desc
+
+// finding all event types 
+DeviceEvents
+| where DeviceName != "win-trfl5rqp5g8"
+| project ActionType
+| distinct ActionType
+| order by ActionType asc
+
+// finding event types with scheduled
+DeviceEvents
+| where DeviceName != "win-trfl5rqp5g8"
+| where ActionType contains "Scheduled"
+| project ActionType
+| distinct ActionType
+| order by ActionType asc
+
+// find new scheduled tasks
+DeviceEvents
+| where DeviceName != "win-trfl5rqp5g8"
+| where ActionType contains "ScheduledTaskCreated"
+
+```
+
+
+
 ## Basic hunting
 
 ## other
