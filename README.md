@@ -92,7 +92,9 @@ DeviceFileEvents
 
 ## hostname whoami etc
 
+```
+// not working
 DeviceProcessEvents 
 | where Timestamp > ago(14d) 
-| where FileName == 'hostname.exe' and AccountName != "" and | project AccountName, Target, ProcessCommandLine, DeviceName, Timestamp  
-| sort by AccountName, Target
+| where FileName == "hostname.exe"
+```
