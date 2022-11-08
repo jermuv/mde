@@ -1,0 +1,3 @@
+DeviceTvmSecureConfigurationAssessment
+| where ConfigurationId == 'scid-2510'
+| project DeviceName, OSPlatform, IsCompliant, IsApplicable

@@ -1,0 +1,5 @@
+// just a quick and dirty query to check attack surface rules, those block rules, ~15 of those
+DeviceTvmSecureConfigurationAssessmentKB
+| where ConfigurationSubcategory == "Attack Surface Reduction"
+| project ConfigurationId, ConfigurationName, ConfigurationCategory, ConfigurationSubcategory
+| order by ConfigurationId asc

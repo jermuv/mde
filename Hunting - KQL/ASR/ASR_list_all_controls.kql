@@ -1,0 +1,4 @@
+// just a quick and dirty query to check all controls that is being checked
+DeviceTvmSecureConfigurationAssessmentKB
+| project ConfigurationId, ConfigurationName, ConfigurationCategory, ConfigurationSubcategory
+| order by ConfigurationCategory, ConfigurationId
