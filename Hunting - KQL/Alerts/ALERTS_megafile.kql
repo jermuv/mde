@@ -1,0 +1,18 @@
+// collection of all stuff, in no real order - might move individual stuff to the separate files
+AlertInfo
+| where DetectionSource == "Antivirus"
+
+
+AlertInfo
+| search "mimikatz"
+
+// generally search antivirus stuff
+AlertInfo
+| where DetectionSource == "Antivirus"
+| where Severity != "High"
+| project Timestamp, AlertId, Title, Category, Severity
+| join (AlertEvidence
+    | where EntityType == "File"
+    | project AlertId, EntityType, FileName, FolderPath, AccountName)
+    on AlertId
+| order by AlertId
