@@ -7,9 +7,9 @@ This is just my personal tips and lessons learned memo.
 Putting for temporary purposes CLI tools here:
 
 
-1. %ProgramFiles%\Windows Defender\MpCmdRun.exe (or windows defender\platform\platform version\MpCmdRun.exe)
-
-2. get-mppreference
+1. [MpCmdRun.exe](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/command-line-arguments-microsoft-defender-antivirus)
+2. [Get-MpPreference](https://learn.microsoft.com/en-us/powershell/module/defender/get-mppreference)
+3. [Get-MpComputerStatus](https://learn.microsoft.com/en-us/powershell/module/defender/get-mpcomputerstatus)
 
 
 # Links
