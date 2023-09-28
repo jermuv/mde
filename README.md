@@ -12,7 +12,18 @@ Putting for temporary purposes CLI tools here:
 3. [Get-MpComputerStatus](https://learn.microsoft.com/en-us/powershell/module/defender/get-mpcomputerstatus)
 
 
-# Links
+# Important links
 
-- [Defender for endpoint](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint)
-- [Intune](https://learn.microsoft.com/en-us/mem/intune/)
+- [Documentation: Defender for endpoint](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint)
+- [Documentation: Intune](https://learn.microsoft.com/en-us/mem/intune/)
+- [Documentation: config manager](https://learn.microsoft.com/en-us/mem/configmgr/)
+- [Documentation: All defender products](https://learn.microsoft.com/en-us/defender/)
+
+## Training
+
+- [Defender Ninja](https://aka.ms/MDENinja)
+
+## What's new
+
+- [MDE](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
+- [Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/whats-new)

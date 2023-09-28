@@ -1,0 +1,17 @@
+# MDE diagnostics
+
+- [MDE Client analyzer](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/overview-client-analyzer)
+
+## Events
+
+Logs are **Microsoft-Windows-SENSE/Operational**
+
+- [MDE Reference](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/event-error-codes)
+
+
+## Performance
+
+
+
+
+# network
