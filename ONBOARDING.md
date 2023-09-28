@@ -11,6 +11,7 @@ Devices joined or managed:
 
 ## 3rd party AV
 
+
 ## Network requirements
 
 - [MDE URLS](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
