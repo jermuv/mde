@@ -1,0 +1,39 @@
+let SearchDevice = vnevado-win10v;
+search SearchDevice
+| distinct $table
+
+
+let deviceName = "vnevado-win10v.vnevado.alpineskihouse.co";
+let deviceId = "7cc55a46caaa06f9de5b83d5c769686bd16ed26f";
+search in (IdentityLogonEvents,IdentityQueryEvents,IdentityDirectoryEvents,DeviceProcessEvents,DeviceNetworkEvents,DeviceFileEvents,DeviceRegistryEvents,DeviceLogonEvents,DeviceImageLoadEvents,DeviceEvents,BehaviorEntities)
+// | where TimeGenerated between (datetime(2024-10-21T00:00:00) .. datetime(2024-10-22T08:00:00))
+Timestamp between (datetime(2024-10-21T00:00:00) .. datetime(2024-10-22T08:00:00))
+and (DeviceName == deviceName
+//or DeviceId == deviceId
+// Events affecting this target device
+//or RemoteDeviceName == deviceName
+//or TargetDeviceName == deviceName
+//or DestinationDeviceName == deviceName
+)
+| order by TimeGenerated asc
+
+let deviceName = "vnevado-win10v.vnevado.alpineskihouse.co";
+let deviceId = "7cc55a46caaa06f9de5b83d5c769686bd16ed26f";
+search in (IdentityLogonEvents,IdentityQueryEvents,IdentityDirectoryEvents,DeviceProcessEvents,DeviceNetworkEvents,DeviceFileEvents,DeviceRegistryEvents,DeviceLogonEvents,DeviceImageLoadEvents,DeviceEvents,BehaviorEntities)
+// | where TimeGenerated between (datetime(2024-10-21T00:00:00) .. datetime(2024-10-22T08:00:00))
+Timestamp between (datetime(2024-10-21T00:00:00) .. datetime(2024-10-22T08:00:00))
+and (DeviceName == deviceName
+//or DeviceId == deviceId
+// Events affecting this target device
+//or RemoteDeviceName == deviceName
+//or TargetDeviceName == deviceName
+//or DestinationDeviceName == deviceName
+)
+| where ActionType == 'FileCreated'
+| search '*nestor*'
+//| distinct FolderPath, FileName, FileSize, InitiatingProcessCommandLine
+
+search 'certutil.exe'
+| where Timestamp between (datetime(2024-10-21T00:00:00) .. datetime(2024-10-22T08:00:00))
+
+| distinct $table
